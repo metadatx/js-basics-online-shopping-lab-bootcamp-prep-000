@@ -38,11 +38,22 @@ function viewCart() {
 }
 
 function total() {
-  // write your code here
+  
 }
 
 function removeFromCart(item) {
-  // write your code here
+  var cartLen = cart.length
+  var exists = false
+  for(var i=0; i<cartLen; i++){
+    if(cart[i].itemName == item){
+      cart.splice(i, 1)
+      exists = true
+      i--
+      cartLen--
+    }
+  }
+  if(exists) return cart
+  else return
 }
 
 function placeOrder(cardNumber) {
