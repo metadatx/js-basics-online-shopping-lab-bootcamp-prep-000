@@ -19,6 +19,7 @@ function addToCart(item) {
 
 function viewCart() {
   var result = []
+  var cartLen = cart.length
   if(cart.length > 0){
     for(var i=0; i<cart.length; i++){
       result.push(`${cart[i].itemName} at $${cart[i].itemPrice}`)
