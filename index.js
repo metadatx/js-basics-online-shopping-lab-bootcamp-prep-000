@@ -20,11 +20,18 @@ function addToCart(item) {
 function viewCart() {
   var result = []
   var cartLen = cart.length
-  if(cart.length > 0){
+  
+  if(cartLen > 0){
     for(var i=0; i<cart.length; i++){
       result.push(`${cart[i].itemName} at $${cart[i].itemPrice}`)
     }
-    return "In your cart, you have " + result.join(", ")
+  }
+  if(cartLen > 1){
+    var lastItem = result.pop()
+    return "In your cart, you have " + result.join(", ") + ", and " + lastItem
+  }
+  else if(cartLen == 1){
+    return "In your cart, you have " + result[0] + "."
   }
   else
     return "Your shopping cart is empty."
