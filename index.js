@@ -28,7 +28,7 @@ function viewCart() {
   }
   if(cartLen > 1){
     var lastItem = result.pop()
-    return "In your cart, you have " + result.join(", ") + ", and " + lastItem
+    return "In your cart, you have " + result.join(", ") + ", and " + lastItem + "."
   }
   else if(cartLen == 1){
     return "In your cart, you have " + result[0] + "."
